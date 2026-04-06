@@ -1,0 +1,214 @@
+/* --- Estilos para Login.css --- */
+
+:root {
+  --login-accent: #3b82f6;
+  --login-dark: #1e293b;
+  --login-bg: #f8fafc;
+  --error-red: #ef4444;
+}
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--login-bg);
+}
+
+/* --- Lado Izquierdo (Sidebar/Imagen) --- */
+.login-sidebar {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 3rem;
+  overflow: hidden;
+}
+
+/* Opcional: puedes poner una imagen de fondo de un motor o taller aquí */
+.login-sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1486006396113-ad7302ff172c?auto=format&fit=crop&q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Toque sutil */
+}
+
+.sidebar-content {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.wrench-icon {
+  font-size: 3rem;
+  background: white;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.sidebar-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* --- Lado Derecho (Formulario) --- */
+.login-form-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-form-box {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.login-form-box h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--login-dark);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+/* --- Inputs --- */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--login-dark);
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: var(--login-accent);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* --- Botones --- */
+.btn-primary {
+  width: 100%;
+  background-color: var(--login-accent);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+.btn-secondary {
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--login-accent);
+  padding: 0.85rem;
+  border: 2px solid var(--login-accent);
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #eff6ff;
+}
+
+.footer-text {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* --- Responsivo --- */
+@media (max-width: 900px) {
+  .login-sidebar {
+    display: none; /* Ocultamos el panel azul en móviles */
+  }
+}
