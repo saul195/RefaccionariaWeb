@@ -1,6 +1,6 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import './Styles/Admin.css';
+import Sidebar from '../Sidebar';
+import '../Styles/Admin.css';
 
 function Inventory() {
   // Datos de ejemplo (más adelante estos vendrán de PHP/MySQL)

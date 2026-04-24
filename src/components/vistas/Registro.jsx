@@ -53,13 +53,7 @@ function Registro() {
               <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres" required />
             </div>
 
-            <div className="input-group">
-              <label htmlFor="rol">Tipo de Perfil</label>
-              <select id="rol" name="rol" required defaultValue="usuario">
-                <option value="usuario">Cliente Particular / Mecánico</option>
-                <option value="admin">Administrador de Tienda</option>
-              </select>
-            </div>
+            
 
             <button type="submit" className="btn-primary">
               Registrarse ahora

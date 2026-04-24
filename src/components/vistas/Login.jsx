@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; 
-import './Styles/Login.css';
+import '../Styles/Login.css';
 
 function Login() {
     const navigate = useNavigate(); // Para redirigir al usuario si entra con éxito
